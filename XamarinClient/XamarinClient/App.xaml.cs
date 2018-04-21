@@ -13,7 +13,7 @@ namespace XamarinClient
 		{
 			InitializeComponent();
 
-			MainPage = new XamarinClient.MainPage();
+			MainPage = new XamarinClient.Views.MainPage();
 		}
 
 		protected override void OnStart ()
