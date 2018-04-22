@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using XamarinClient.ViewModels;
 
 namespace XamarinClient.Views
 {
@@ -12,6 +13,8 @@ namespace XamarinClient.Views
 		public MainPage()
 		{
 			InitializeComponent();
-		}
+            //Binding to the locator key
+            BindingContext = ((ViewModelLocator)Application.Current.Resources["Locator"]).Main;
+        }
 	}
 }
