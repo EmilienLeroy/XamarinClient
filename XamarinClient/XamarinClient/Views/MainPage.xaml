@@ -4,12 +4,20 @@
              xmlns:local="clr-namespace:XamarinClient.Views"
              x:Class="XamarinClient.Views.MainPage">
 
-    <ListView x:Name="listeItineraires" ItemsSource="{Binding ListeDevises, Mode=TwoWay}" SeparatorVisibility="None">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <TextCell Text="{Binding Nom}" />
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+    <StackLayout>
+        <Entry x:Name="MontantEuros" Text="{Binding MontantEuros, Mode=TwoWay}" ></Entry>
+        <Button x:Name="convertir" Text="Convertir" Command="{Binding BtnSetConversion}" IsEnabled="True"></Button>
+    
+    
+        <ListView x:Name="listeItineraires" SelectedItem="{Binding DeviseSelect, Mode=TwoWay}" ItemsSource="{Binding ListeDevises, Mode=TwoWay}" SeparatorVisibility="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Nom}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
+    
 
 </ContentPage>
