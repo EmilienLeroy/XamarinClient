@@ -66,10 +66,5 @@ namespace XamarinClient.ViewModels
             var result = await api.getAllDevisesAsync();
             this.ListeDevises = new ObservableCollection<Devise>(result);
         }
-
-        
-
-
-
     }
 }
