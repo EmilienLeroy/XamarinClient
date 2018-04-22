@@ -15,7 +15,7 @@ namespace XamarinClient.Services
         public WebService()
         {
             this._httpclient = new HttpClient();
-            this._httpclient.BaseAddress = new Uri("http://192.168.1.180:50088/api/");
+            this._httpclient.BaseAddress = new Uri("http://localhost:50088/api/");
         }
 
         public async Task<List<Devise>> getAllDevisesAsync()

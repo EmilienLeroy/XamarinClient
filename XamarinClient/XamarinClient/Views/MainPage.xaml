@@ -4,8 +4,12 @@
              xmlns:local="clr-namespace:XamarinClient.Views"
              x:Class="XamarinClient.Views.MainPage">
 
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <ListView x:Name="listeItineraires" ItemsSource="{Binding ListeDevises, Mode=TwoWay}" SeparatorVisibility="None">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Nom}" />
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 
 </ContentPage>
